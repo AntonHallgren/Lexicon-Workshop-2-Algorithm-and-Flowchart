@@ -415,7 +415,67 @@ printRemaining[/Print remaining/] -->
 END
 ```
 
-## 14
+## 14 Login System (Maximum 3 Attempts)
+
+### Pseudocode
+
+```text
+START
+    correct = *****
+    FOR attempt IN 3
+        INPUT enteredPassword
+        IF enteredPassword == correct THEN
+            PRINT Access Granted
+            RETURN
+        ENDIF
+        PRINT Try Again
+    ENDFOR
+    PRINT Account Locked
+END
+```
+
+Some notes on this one:
+Presumable the correct password would be entered as an input from the program or retrieved from a database rather than hardcoded as it is here. 
+Here I used the keyword RETURN wich should let us instantly exit this block of code. If this is not available (I don't think we have talked about it) it is possible to achieve the same thing without it but the code becomes a bit more complicated. 
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+setCorrect[correct = *****] -->
+initCounter[attempts = 0] -->
+loop{attempts < 3} -- no -->
+locked[/Print Account Locked/] -->
+END([End])
+
+loop -- yes -->
+input[/Get input enteredPassword/] -->
+check{enteredPassword == correct} -- no -->
+increment[attempts = attempts + 1] -->
+loop
+
+check -- yes -->
+granted[/Print Access Granted/] -->
+END
+```
+
+## 15 Store Checkout with Multiple Items
+
+### Pseudocode
+
+```text
+
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+
+```
+
+## 16 Electricity Bill Calculator
 
 ### Pseudocode
 
