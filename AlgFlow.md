@@ -1,3 +1,0 @@
-# Worskop: Algorithm and Flowshart
-
-
