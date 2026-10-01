@@ -138,7 +138,46 @@ output[/Output SI/] -->
 END([End])
 ```
 
-## 6
+## 6 Avarage Temperature Calculation
+
+### Pseudocode
+
+very similar to assignment 2
+
+```text
+START
+    numberOfDays = 7
+    total = 0
+    FOR i IN numberOfDays
+        INPUT temperature
+        total = total + temperature
+    ENDFOR
+    avarage = total/numberOfDays
+    PRINT avarage
+END
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+initDays[numberOfDays = 7] -->
+initTotal[total = 0] -->
+initCounter[i = 0] -->
+input[/Get input temperautre/] -->
+sum[total = total + temperature] -->
+incrementCounter[i = i + 1] -->
+loop{i < numberOfDays} -- no -->
+initAvarage[avarage = total/numberOfDays]-->
+displayAvarage[/Print avarage/] -->
+END([End])
+
+loop -- yes -->
+input
+```
+
+## 7
 
 ### Pseudocode
 
