@@ -71,7 +71,7 @@ END([End])
 loop -- yes --> initResult
 ```
 
-## 4
+## 4 Positive, Negative, or Zero Check
 
 ### Pseudocode
 
@@ -108,7 +108,37 @@ displayNegative[/Print Negative/] -->
 End
 ```
 
-## 5
+## 5 Simple Interest Calculator
+
+### Pseudocode
+
+There are differences in the wording of this exercise that makes me think this code is called from a program rather than run directly by a user. If this is not the case change OUTPUT to print and perhaps add additional prints to politely ask for each of the input values, and better explain the output. 
+
+```text
+START
+    INPUT P // Principal
+    INPUT R //Rate of interest
+    INPUT T //Time
+    SI = (P * R * T) / 100
+    OUTPUT SI
+END
+```
+
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+inputP[/Get input P/] -->
+inputR[/Get input R/] -->
+inputT[/Get input T/] -->
+calculate["SI = (P * R * T) / 100"] -->
+output[/Output SI/] -->
+END([End])
+```
+
+## 6
 
 ### Pseudocode
 
