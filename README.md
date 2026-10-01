@@ -257,7 +257,9 @@ START
         product = product * i
     ENDFOR
     OUTPUT product
+END
 ```
+
 
 ### Flowchart
 
@@ -277,7 +279,37 @@ increment[i = i +1] -->
 loop
 ```
 
-## 10
+## 10 Calculate Discount on Purchase
+
+### Pseudocode
+
+```text
+START
+    INPUT price
+    IF price > 1000 THEN
+        price = price * 0.9
+    ENDIF
+    OUTPUT price
+END
+```
+Note: The assignment says greater than, not greater or equal
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+input[/Get input Price/] -->
+check{price > 1000} -- no -->
+output[/Output price/] -->
+END([End])
+
+check -- yes -->
+discount[price = price * 0.9] -->
+output
+```
+
+## 11
 
 ### Pseudocode
 
