@@ -344,6 +344,48 @@ END
 ### Pseudocode
 
 ```text
+START
+    INPUT salary
+    INPUT years
+    bonus = 0
+    IF years >= 5 THEN
+        bonus = 10
+    ELSE
+        bounus = 5
+    ENDIF
+    totalSalary = (salary * (100 + bonus))/100
+    PRINT "Your bonus is " + bonus + "%"
+    PRINT "Your total salary is " + totalSalary
+END
+```
+The else part could be considered redundant here since you could just initate bonus to 5, but I think in this case it is clearer this way. 
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+inputS[/Get input salary/] -->
+inputY[/Get input years/] -->
+initBonus[bonus = 0] -->
+check{years >= 5} -- no -->
+smallBonus[bonus = 5] -->
+initTotalSalary["totalSalary = 
+(salary * (100 + bonus))/100"] -->
+displayBonus[/Print bonus%/]-->
+displayTotSal[/Print totalSalary/]-->
+END([End])
+
+check -- yes -->
+largeBonus[bonus = 10] -->
+initTotalSalary
+```
+
+## 13
+
+### Pseudocode
+
+```text
 
 ```
 
