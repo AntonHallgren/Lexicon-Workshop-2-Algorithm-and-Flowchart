@@ -45,13 +45,15 @@ loop -- yes --> input
 ```text
 START
     INPUT number
-    //Assuming that RANGE is inclusive for both start and end value
     FOR i in RANGE(1, 10)
         result = i * number
         PRINT number * i = result
     ENDFOR
 END
 ```
+
+Here I am making the assumption that RANGE(1, 10) gives each of the numbers 1 to 10, inclusive. 
+
 
 ### Flowchart
 
@@ -70,6 +72,43 @@ loop -- yes --> initResult
 ```
 
 ## 4
+
+### Pseudocode
+
+```text
+START
+    INPUT number
+    IF number > 0
+        PRINT Positive
+    ELSE IF number < 0
+        PRINT Negative
+    ELSE
+        PRINT Zero
+    ENDIF
+END
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start])-->
+input[/Get input number/]-->
+askPositive{number > 0} -- no -->
+askNegative{number < 0} -- no -->
+displayZero[/Print Zero/] -->
+End([End])
+
+askPositive -- yes -->
+displayPositive[/Print Positive/] -->
+End
+
+askNegative -- yes -->
+displayNegative[/Print Negative/] -->
+End
+```
+
+## 5
 
 ### Pseudocode
 
