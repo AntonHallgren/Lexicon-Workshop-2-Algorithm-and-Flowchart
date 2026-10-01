@@ -79,9 +79,9 @@ loop -- yes --> initResult
 ```text
 START
     INPUT number
-    IF number > 0
+    IF number > 0 THEN
         PRINT Positive
-    ELSE IF number < 0
+    ELSE IF number < 0 THEN
         PRINT Negative
     ELSE
         PRINT Zero
@@ -207,7 +207,37 @@ display[/Print area/] -->
 END([End])
 ```
 
-## 8
+## 8 Determine Pass or Fail
+
+### Pseudocode
+
+```text
+START
+    INPUT marks
+    IF marks >= 50 THEN
+        PRINT Pass
+    ELSE
+        PRINT Fail
+    ENDIF
+END
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+input[/Get input marks/] -->
+check{marks >= 50} -- no -->
+printF[/Print Fail/] -->
+END([End])
+
+check -- yes -->
+printP[/Print Pass/] -->
+END
+```
+
+## 9
 
 ### Pseudocode
 
