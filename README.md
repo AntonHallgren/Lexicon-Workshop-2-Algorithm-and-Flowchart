@@ -465,14 +465,48 @@ END
 ### Pseudocode
 
 ```text
-
+START
+    PRINT "Input number of items"
+    INPUT numberOfItems
+    totalCost = 0
+    FOR i IN numberOfItems
+        PRINT "Input cost of item number " + (i+1)
+        INPUT cost
+        totalCost = totalCost + cost
+    ENDFOR
+    IF totalCost >= 5000 THEN
+        totalCost = totalCost * 0.85
+    ENDIF
+    OUTPUT totalCost
+END
 ```
+Not sure if 5000 is supposed to be included or not, I think it makes more sense to include it. 
+
 
 ### Flowchart
 
 ```mermaid
 flowchart TD
+start([Start]) -->
+aksNumber[/Print Input number of items/] -->
+inputNumber[/Get input numberOfItems/] -->
+initTotalCost[totalCost = 0]-->
+initCounter[i = 0] -->
+loop{i < numberOfItems} -- no -->
+check{cost >= 5000} -- no -->
+output[Output totalCost] -->
+END([End])
 
+loop -- yes -->
+askCost[/Print Input cost of item/] -->
+inputCost[/Get input cost/] -->
+addCost[totalCost = totalCost + cost] -->
+increment[i = i + 1] -->
+loop
+
+check -- yes -->
+discount[totalCost = totalCost * 0.85] -->
+output
 ```
 
 ## 16 Electricity Bill Calculator
