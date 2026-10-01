@@ -26,16 +26,23 @@ start([start]) -->
 initNSubjects[numberOfSubjects = 3] -->
 initTotal[total = 0] -->
 initcounter[counter = 0] -->
-input[\Get input marks\] --> 
-add[total = total + marks] -->
-incrementCounter[counter = counter +1] -->
 loop{counter < numberOfSubjects} -- no -->
+
 initAvarage[avarage = total / numberOfSubjects] --> 
 displayTotal[/Print total/]-->
 displayAvarage[/Print avarage/] -->
 END([End])
 
-loop -- yes --> input
+
+
+
+
+
+loop -- yes --> 
+input[\Get input marks\] --> 
+add[total = total + marks] -->
+incrementCounter[counter = counter +1] -->
+loop
 ```
 
 ## 3 Display Multiplication Table
@@ -63,13 +70,14 @@ flowchart TD
 start([Start]) --> 
 input[/Get input number/] -->
 initCounter[i = 1] -->
-initResult[result = i * number] -->
-display[/Print number + i = result/] -->
-incrementCounter[i = i + 1] -->
 loop{i <= 10} -- no -->
 END([End])
 
-loop -- yes --> initResult
+loop -- yes --> 
+initResult[result = i * number] -->
+display[/Print number + i = result/] -->
+incrementCounter[i = i + 1] -->
+loop
 ```
 
 ## 4 Positive, Negative, or Zero Check
@@ -166,16 +174,16 @@ start([Start]) -->
 initDays[numberOfDays = 7] -->
 initTotal[total = 0] -->
 initCounter[i = 0] -->
-input[/Get input temperautre/] -->
-sum[total = total + temperature] -->
-incrementCounter[i = i + 1] -->
 loop{i < numberOfDays} -- no -->
 initAvarage[avarage = total/numberOfDays]-->
 displayAvarage[/Print avarage/] -->
 END([End])
 
 loop -- yes -->
-input
+input[/Get input temperautre/] -->
+sum[total = total + temperature] -->
+incrementCounter[i = i + 1] -->
+loop
 ```
 
 ## 7
@@ -260,6 +268,7 @@ input[/Get input N/] -->
 initProduct[product = 1] -->
 initCounter[i = 1] -->
 loop{i <= N} -- no -->
+output[/Output product/] -->
 END([End])
 
 loop -- yes -->
