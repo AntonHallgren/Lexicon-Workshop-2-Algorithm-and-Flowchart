@@ -339,7 +339,7 @@ free[/Print Free Delivery/] -->
 END
 ```
 
-## 12
+## 12 Employee Salary and Bonus Calculator
 
 ### Pseudocode
 
@@ -381,7 +381,41 @@ largeBonus[bonus = 10] -->
 initTotalSalary
 ```
 
-## 13
+## 13 Mobile Data Usage Monitor
+
+### Pseudocode
+
+```text
+START
+    INPUT dataLimit
+    INPUT dataUsage
+    IF dataUsage <= dataLimit THEN
+        remaining = dataLimit - dataUsage
+        Print "Data remaining " + remaining
+    ELSE
+        PRINT "Data limit exceeded"
+    ENDIF
+END
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+inputLimit[/Get input dataLimit/] -->
+inputUsage[/Get input dataUsage/] -->
+check{dataUsage <= dataLimit} -- no -->
+printExceed[/Print Data limit exceeded/] -->
+END([End])
+
+check -- yes -->
+initRemaining[remaining = dataLimit - dataUsage] -->
+printRemaining[/Print remaining/] -->
+END
+```
+
+## 14
 
 ### Pseudocode
 
