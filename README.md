@@ -53,6 +53,7 @@ END
 ```
 
 Here I am making the assumption that RANGE(1, 10) gives each of the numbers 1 to 10, inclusive. 
+The PRINT message is a bit simplified compared to what would be required to convert to a string in a programming language. 
 
 
 ### Flowchart
@@ -178,6 +179,35 @@ input
 ```
 
 ## 7
+
+### Pseudocode
+
+```text
+START
+    Print "Input length"
+    INPUT length
+    Print "Input width"
+    INPUT width
+    area = length * width
+    PRINT "The area of the rectangle is " + area
+END
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+askInputL[/Print Input length/] -->
+inputL[/Get input length/] -->
+askInputW[/Print Input Width/] -->
+inputW[/Get input width/] -->
+calculate[area = length * width] -->
+display[/Print area/] -->
+END([End])
+```
+
+## 8
 
 ### Pseudocode
 
