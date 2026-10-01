@@ -309,7 +309,37 @@ discount[price = price * 0.9] -->
 output
 ```
 
-## 11
+## 11 Online Shopping Delivry Eligibility
+
+### Pseudocode
+
+```text
+START
+    INPUT price
+    IF price >= 500 THEN
+        PRINT "Free Delivery"
+    ELSE
+        PRINT "Delivery Charges Applies"
+    ENDIF
+END
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+input[/Get input price/] -->
+check{price >= 500} -- no -->
+notFree[/Print Delivery Charges Applies/]-->
+END([End])
+
+check -- yes -->
+free[/Print Free Delivery/] -->
+END
+```
+
+## 12
 
 ### Pseudocode
 
