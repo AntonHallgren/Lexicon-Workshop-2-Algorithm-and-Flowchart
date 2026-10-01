@@ -494,7 +494,7 @@ initTotalCost[totalCost = 0]-->
 initCounter[i = 0] -->
 loop{i < numberOfItems} -- no -->
 check{cost >= 5000} -- no -->
-output[Output totalCost] -->
+output[/Output totalCost/] -->
 END([End])
 
 loop -- yes -->
@@ -514,12 +514,52 @@ output
 ### Pseudocode
 
 ```text
-
+START
+    INPUT used
+    totalCost = 0
+    IF used > 100 THEN
+        totalCost = totalCost + 100 * 1.5
+        used = used - 100
+        IF used > 200 THEN
+            totalCost = totalCost + 200 * 2.0
+            used = used - 200
+            totalCost = totalCost + used * 3.0
+        ELSE
+            totalCost = totalCost + used * 2.0
+        ENDIF
+    ELSE
+        totalCost = totalCost + used * 1.5
+    ENDIF
+    OUTPUT totalCost
+END
 ```
+
+Note: There are several possible ways to solve this. I think this is the closest to solving it word by of the assignment. You can for example simplify the code by determining a single expression for each range of values rather than calculating the cost of each segment and adding them toghether. Or you could start by adding a cost of 1.5 for everything, then add 0.5 more for everything above 100, and then 1.0 more for everything above 300. 
 
 ### Flowchart
 
 ```mermaid
 flowchart TD
+start([Start]) -->
+input[/Get input used/] -->
+initCost[totalCost = 0] -->
+check1{used > 100} -- no -->
+calc1Partial[totalCost = totalCost + used * 1.5] -->
+output[/Output totalCost/] -->
+END([End])
+
+check1 -- yes -->
+calc1Full[totalCost = totalCost + 100 * 1.5] -->
+subtract1[used = used - 100] -->
+check2{used > 200} -- no -->
+calc2Partial[totalCost = totalCost + used * 2.0] -->
+output
+
+check2 -- yes -->
+calc2Full[totalCost = totalCost + 100 * 2.0] -->
+subtract2[used = used - 200] -->
+calc3[totalCost = totalCost + used * 3.0] -->
+output
+
 
 ```
