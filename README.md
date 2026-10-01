@@ -237,7 +237,38 @@ printP[/Print Pass/] -->
 END
 ```
 
-## 9
+## 9 Calculate Factorial of a Number
+
+### Pseudocode
+
+```text
+START
+    INPUT N
+    product = 1
+    FOR i IN RANGE(1, N)
+        product = product * i
+    ENDFOR
+    OUTPUT product
+```
+
+### Flowchart
+
+```mermaid
+flowchart TD
+start([Start]) -->
+input[/Get input N/] -->
+initProduct[product = 1] -->
+initCounter[i = 1] -->
+loop{i <= N} -- no -->
+END([End])
+
+loop -- yes -->
+calc[product = product * i] -->
+increment[i = i +1] -->
+loop
+```
+
+## 10
 
 ### Pseudocode
 
